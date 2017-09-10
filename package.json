@@ -1,0 +1,28 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Resume builder",
+  "main": "index.js",
+  "scripts": {
+    "build" : "npm run basic",
+    "basic": "mustache data/resume.json template/basic.mustache > public/basic.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easylogic/resume.git"
+  },
+  "keywords": [
+    "resume",
+    "builder"
+  ],
+  "author": "easylogic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/easylogic/resume/issues"
+  },
+  "homepage": "https://github.com/easylogic/resume#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "mustache": "^2.3.0"
+  }
+}

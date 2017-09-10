@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume</title>
+    <style type="text/css">
+
+    html,body {
+        margin:0px;
+        padding:0px;
+    }
+
+    body {
+        margin:0 auto;
+        max-width:1100px;
+    }
+
+    .page-break {
+        page-break-after: always;
+        page-break-inside: avoid;
+    }
+
+    header.author {
+        display:flex;
+        padding:40px 0px;
+    }
+
+    header.author .author-name {
+        flex:1;
+        font-size:70px;
+        font-weight:bold;
+    }
+
+    header.author .author-info {
+        flex:1;
+        text-align:right;
+    }    
+
+    header.author .author-info * {
+        text-decoration:none;
+        margin-bottom:10px;
+    }
+
+    section {
+        padding:40px 0px;
+    }
+
+    section > .title {
+        font-size:30px;
+        font-weight:bold;
+        border-bottom:1px solid rgba(0, 0, 0, 0.8); 
+        padding-bottom:20px;
+        margin-bottom:20px;
+    }
+
+    section > .description {
+        padding-left:30px;
+        line-height:2;
+    }
+
+    section > .item-list {
+        padding-left:20px;        
+    }
+
+    section > .item-list > .item {
+        margin-bottom:20px;
+    }
+
+    section > .item-list .item .item-title {
+        font-weight:bold;
+        font-size:20px;
+        margin-bottom:20px;
+    }
+
+    section > .item-list .item .item-description ul {
+        display:inline-block;
+        list-style:none;
+    }
+
+    section > .item-list .item .item-description ul li {
+        display:inline-block;
+        margin-right:20px;
+    }
+
+    section > .work-item-list .work-item {
+        padding:40px 20px 20px;
+    }
+
+    section > .work-item-list .work-item .item-title {
+        padding: 10px 0px;
+        font-weight:bold;
+        padding-bottom:20px;
+    }
+
+    section > .work-item-list .work-item .item-title h1 {
+        display:inline-block;
+        margin:0px;
+    }
+
+    section > .work-item-list .work-item .item-duration {
+        float:right;
+        color: rgba(0, 0, 255, 0.5);
+    }
+
+    section > .work-item-list .work-item .item-description {
+        line-height:2;
+    }
+
+    section .edu-item .date {
+        color: rgba(0, 0, 255, 0.5);
+        margin-left:20px;
+    }
+    </style>
+</head>
+<body>
+    
+<header class="author">
+    <div class="author-name">{{author.name}}</div>
+    <div class="author-info">
+
+        {{#author.email}}<div class="author-email">{{author.email}}</div>{{/author.email}}
+        {{#author.phonenumber}}<div class="author-phonenumber">{{author.phonenumber}}</div>{{/author.phonenumber}}
+        <div class="author-resource">
+            {{#author.resource}}
+            <a href="{{{link}}}">{{title}}</a>
+            {{/author.resource}}
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="title">Objective</div>
+    <div class="description">
+        {{ objective.description }}
+    </div>
+</section>
+
+<section>
+    <div class="title">Skills</div>
+    <div class="item-list">
+        {{#skill.items}}
+        <div class="item">
+            <div class="item-title">{{title}}</div>
+            <div class="item-description">
+                <ul>
+                    {{#skill-list}}
+                    <li>{{.}}</li>
+                    {{/skill-list}}
+                </ul>
+                
+            </div>
+        </div>
+        {{/skill.items}}
+    </div>
+</section>
+
+<section class="page-break">
+    <div class="title"> Work Experience</div>
+    <div class="work-item-list">
+        {{#work.items}}
+        <div class="work-item">
+            <div class="item-company" style="color: {{color}};">{{company}}</div>
+            <div class="item-title">
+                <h1>{{title}}</h1>
+                <div class="item-duration">{{startAt}} ~ {{endAt}}</div>
+            </div>            
+            <div class="item-description">
+                <div>{{description}}</div>
+                <ul>
+                    {{#works}}
+                    <li>{{.}}</li>
+                    {{/works}}
+                </ul>
+            </div>  
+        </div>
+        {{/work.items}}
+    </div>
+</section>
+
+<section>
+        <div class="title">Education</div>
+        <div class="edu-list">
+            {{#education.items}}
+            <div class="edu-item">
+                <span class="place">{{place}}</span>
+                <span class="date">{{date}}</span>
+            </div>
+            {{/education.items}}
+        </div>
+</section>
+
+</body>
+</html>
