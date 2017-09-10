@@ -112,6 +112,15 @@
         color: rgba(0, 0, 255, 0.5);
         margin-left:20px;
     }
+
+    section .opensource-list .item {
+        padding:10px;
+    }
+
+    section .opensource-list .item .description {
+        padding-top:10px;
+        padding-left:30px;
+    } 
     </style>
 </head>
 <body>
@@ -188,6 +197,20 @@
                 <span class="date">{{date}}</span>
             </div>
             {{/education.items}}
+        </div>
+</section>
+
+<section>
+        <div class="title">Opensource</div>
+        <div class="opensource-list">
+            {{#opensource.items}}
+            <div class="item">
+                <span class="project">{{project}} - {{repository}}</span>
+                <div class="description">
+                    {{description}}
+                </div>
+            </div>  
+            {{/opensource.items}}
         </div>
 </section>
 

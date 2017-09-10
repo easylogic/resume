@@ -223,6 +223,21 @@
         "items" : [
             { "place" : "부산외국어대학교 컴퓨터공학부", "date" : "2006.02" }
         ]
+    },
+
+    "opensource": {
+        "items" : [
+            {
+                "project" : "summernote",
+                "repository" : "https://github.com/summernote/summernote",
+                "description" : "Super simple WYSIWYG editor"
+            },
+            {
+                "project" : "JUI",
+                "repository" : "https://github.com/juijs/jui",
+                "description" : "JUI provide all kinds of UI components that are used in web pages. "
+            }
+        ]
     }
 
 }
