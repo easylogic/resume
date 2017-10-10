@@ -4,7 +4,7 @@
   "description": "Resume builder",
   "main": "index.js",
   "scripts": {
-    "build" : "npm run basic",
+    "build": "npm run basic",
     "basic": "mustache data/resume.json template/basic.mustache > public/basic.html"
   },
   "repository": {
