@@ -14,7 +14,12 @@
 
     body {
         margin:0 auto;
-        max-width:1100px;
+        max-width:900px;
+    }
+
+    a {
+        color: #4964e7 !important;
+        text-decoration: none;
     }
 
     .page-break {
@@ -73,6 +78,7 @@
         font-size:20px;
         margin-bottom:20px;
     }
+    
 
 
     section > .item-list .item .item-description ul {
@@ -80,13 +86,14 @@
         list-style:none;
     }
 
+
     section > .item-list .item .item-description ul li {
         display:inline-block;
         margin-right:20px;
     }
 
     section > .work-item-list .work-item {
-        padding:40px 20px 20px;
+        padding:20px;
     }
 
     section > .work-item-list .work-item .item-company {
@@ -94,10 +101,24 @@
     }
 
     section > .work-item-list .work-item .item-title {
-        padding: 10px 0px;
+        padding: 0px;
         font-weight:bold;
-        padding-bottom:20px;
+        padding-bottom:10px;
     }    
+
+
+
+    section > .work-item-list .work-item .item-title .title-description {
+        font-size: 14px;
+        color: #727272;
+        font-weight: normal;
+    }        
+
+    section > .work-item-list .work-item .item-title .star {
+        font-size: 16px;
+        color: #4964e7;
+        font-weight: normal;
+    }            
 
     section > .work-item-list .work-item .item-title h1 {
         display:inline-block;
@@ -145,9 +166,9 @@
 <section>
     <div class="title">Objective</div>
     <div class="description">
-        12년차 웹개발자로 프런트엔드 개발 및 서버 개발에서 다양한 경험이 있습니다. Java, Javascript, Node.js, MySQL, PHP 등의 기술을 사용해서 프로덕션 서비스를 개발 및 운영한 경험이 있으며 기존의 시스템을 좋은 방향으로 이끌려는 의지가 강합니다.
+        14년차 웹개발자로 프런트엔드 개발 및 서버 개발에서 다양한 경험이 있습니다. Javascript, Node.js, Java, PHP 등의 기술을 사용해서 프로덕션 서비스를 개발 및 운영한 경험이 있으며 기존의 시스템을 좋은 방향으로 이끌려는 의지가 강합니다.
 
- 오픈소스 쪽에 관심이 많이 있으며 현재도 2개의 프로젝트에 메인 개발자로 활동하고 있습니다. 새로운 것에 관심이 많고 프로그램을 좀 더 잘 만들 수 있는 방법에 대한 연구하고 공유하는 것을 좋아합니다.
+ 오픈소스 쪽에 관심이 많이 있으며 현재도 몇 개의 프로젝트에서 메인 개발자로 활동하고 있습니다. 새로운 것에 관심이 많고 프로그램을 좀 더 잘 만들 수 있는 방법에 대한 연구하고 공유하는 것을 좋아합니다.
     </div>
 </section>
 
@@ -158,10 +179,10 @@
             <div class="item-title">Front-End</div>
             <div class="item-description">
                 <ul>
-                    <li>Javascript</li>
-                    <li>Html5</li>
-                    <li>CSS3</li>
-                    <li>JUI &amp; Chart</li>
+                    <li>Javascript&#x2F;TypeScript</li>
+                    <li>HTML5&#x2F;CSS3</li>
+                    <li>Vue</li>
+                    <li>React</li>
                 </ul>
                 
             </div>
@@ -173,10 +194,7 @@
                     <li>NodeJS</li>
                     <li>Java</li>
                     <li>PHP</li>
-                    <li>CodeIgniter</li>
                     <li>Spring Framework</li>
-                    <li>Jetty</li>
-                    <li>Apache</li>
                 </ul>
                 
             </div>
@@ -194,23 +212,133 @@
                 
             </div>
         </div>
-        <div class="item">
-            <div class="item-title">ETC</div>
-            <div class="item-description">
-                <ul>
-                    <li>Ubuntu</li>
-                    <li>Git&#x2F;Github</li>
-                    <li>Subversion</li>
-                </ul>
-                
-            </div>
-        </div>
     </div>
 </section>
 
 <section class="page-break">
+        <div class="title">Open Source</div>
+        <div class="work-item-list">
+            <div class="work-item">
+                <div class="item-title">
+                    <h1>easylogic&#x2F;editor <span class='title-description'>- Fantastic Web Design Tool</span></h1>
+                    <div class="item-duration">2019.05 ~ 현재</div>
+                    
+                </div>                       
+                <div class="repository">repository: <a href="https:&#x2F;&#x2F;github.com&#x2F;easylogic&#x2F;editor" target="_blank">https:&#x2F;&#x2F;github.com&#x2F;easylogic&#x2F;editor</a></div>
+                <div class="homepage">homepage: <a href="https:&#x2F;&#x2F;www.easylogic.studio" target="_blank">https:&#x2F;&#x2F;www.easylogic.studio</a></div>                 
+                <div class="description">
+                    <ul>
+                        <li>웹 기반 디자인 툴 개발</li>
+                        <li>Path 에디터, Gradient 에디터 등 웹디자인에 필요한 요소 개발</li>
+                        <li>자체 UI 프레임워크 개발(<a href="https://github.com/easylogic/sapa" target="_sapa_">Sapa</a>)</li>
+                    </ul>                    
+                </div>
+            </div>  
+            <div class="work-item">
+                <div class="item-title">
+                    <h1>codemirror-colorpicker <span class='title-description'>- 코드미러에서 사용할 수 있는 컬러피커</span></h1>
+                    <div class="item-duration">2017.01 ~ 현재</div>
+                    
+                </div>                       
+                <div class="repository">repository: <a href="https:&#x2F;&#x2F;github.com&#x2F;easylogic&#x2F;codemirror-colorpicker" target="_blank">https:&#x2F;&#x2F;github.com&#x2F;easylogic&#x2F;codemirror-colorpicker</a></div>
+                <div class="homepage">homepage: <a href="https:&#x2F;&#x2F;colorpicker.easylogic.studio" target="_blank">https:&#x2F;&#x2F;colorpicker.easylogic.studio</a></div>                 
+                <div class="description">
+                    <ul>
+                        <li>코드미러 에디터 컬러피커 제작 </li>
+                        <li>이미지 필터 기능 구현 (WebGL용 필터 개발)</li>
+                        <li>Gradient 모듈 개발</li>
+                        <li>이미지 Histogram 모듈 개발</li>
+                    </ul>                    
+                </div>
+            </div>  
+            <div class="work-item">
+                <div class="item-title">
+                    <h1>Summernote <span class='title-description'>- Super simple WYSIWYG editor</span></h1>
+                    <div class="item-duration">2014.10 ~ 현재</div>
+                    
+                </div>                       
+                <div class="repository">repository: <a href="https:&#x2F;&#x2F;github.com&#x2F;summernote&#x2F;summernote" target="_blank">https:&#x2F;&#x2F;github.com&#x2F;summernote&#x2F;summernote</a></div>
+                <div class="homepage">homepage: <a href="https:&#x2F;&#x2F;summernote.org" target="_blank">https:&#x2F;&#x2F;summernote.org</a></div>                 
+                <div class="description">
+                    <ul>
+                        <li>Summernote 메인테이너</li>
+                        <li>Summernote 플러그인 & 모듈 시스템 개발</li>
+                        <li>Hint 모듈 개발</li>
+                        <li>Summernote Lite 버전 개발</li>
+                    </ul>                    
+                </div>
+            </div>  
+            <div class="work-item">
+                <div class="item-title">
+                    <h1>JUI <span class='title-description'>- JUI provide all kinds of UI components that are used in web pages. </span></h1>
+                    <div class="item-duration">2014.03 ~ 2017.06</div>
+                    
+                </div>                       
+                <div class="repository">repository: <a href="https:&#x2F;&#x2F;github.com&#x2F;juijs&#x2F;jui" target="_blank">https:&#x2F;&#x2F;github.com&#x2F;juijs&#x2F;jui</a></div>
+                <div class="homepage">homepage: <a href="http:&#x2F;&#x2F;jui.io&#x2F;" target="_blank">http:&#x2F;&#x2F;jui.io&#x2F;</a></div>                 
+                <div class="description">
+                    <ul>
+                        <li>UI & Chart 개발 및 유지보수</li>
+                        <li>Virtual Table 개발</li>
+                        <li>Color Picker 개발 </li>
+                        <li>Chart 그리드 레이아웃 시스템 코어 개발</li>
+                    </ul>                    
+                </div>
+            </div>  
+        </div>
+</section>
+
+<section>
     <div class="title"> Work Experience</div>
     <div class="work-item-list">
+        <div class="work-item">
+            <div class="item-company" style="color: #2d96ed;">MyRealTrip</div>
+            <div class="item-title">
+                <h1>프런트엔드 개발</h1>
+                <div class="item-duration">2019.12 ~ 현재</div>
+            </div>            
+            <div class="item-description">
+                <div>마이리얼트립에서 적용되는 프런트엔드 시스템 개발 및 유지보수</div>
+                <ul>
+                    <li>파트너&#x2F;매니저 리뉴얼 프로젝트 진행 (Typescript, React 기반)</li>
+                    <li>파트너&#x2F;매니저에서 사용되는 NextJS 빌드를 기본 Webpack 빌드로 전환 작업</li>
+                    <li>RoR과 Docker 시스템에서 프런트개발 시스템 분리 </li>
+                    <li>Swagger JSON 통합 관리 툴 개발</li>
+                    <li>프로모션 이미지 링크 맵 툴 개발</li>
+                    <li>템플릿으로 이미지를 생성하는 툴 개발</li>
+                </ul>
+            </div>  
+        </div>
+        <div class="work-item">
+            <div class="item-company" style="color: green;">Line Biz Plus</div>
+            <div class="item-title">
+                <h1>BITMAX 가상화폐 거래소 개발</h1>
+                <div class="item-duration">2019.02 ~ 2019.12</div>
+            </div>            
+            <div class="item-description">
+                <div>가상화폐거래소 개발의 프런트엔드 리딩을 담당</div>
+                <ul>
+                    <li>일본향 라인앱 가상화폐 거래소 개발 리딩</li>
+                    <li>React &amp; Hook 적용</li>
+                    <li>ChartIQ 적용</li>
+                </ul>
+            </div>  
+        </div>
+        <div class="work-item">
+            <div class="item-company" style="color: green;">Line Plus</div>
+            <div class="item-title">
+                <h1>BITBOX 가상화폐 거래소 개발</h1>
+                <div class="item-duration">2017.12 ~ 2019.12</div>
+            </div>            
+            <div class="item-description">
+                <div>가상화폐거래소 개발의 프런트엔드 리딩을 담당</div>
+                <ul>
+                    <li>글로벌향 exchange 거래소 개발 리딩</li>
+                    <li>VueJS 선정 및 프런트 초기 환경 설정</li>
+                    <li>ChartIQ 및 트레이딩뷰 적용</li>
+                </ul>
+            </div>  
+        </div>
         <div class="work-item">
             <div class="item-company" style="color: blue;">JenniferSoft</div>
             <div class="item-title">
@@ -429,24 +557,6 @@
                 <span class="place">부산외국어대학교 컴퓨터공학부</span>
                 <span class="date">2006.02</span>
             </div>
-        </div>
-</section>
-
-<section>
-        <div class="title">Open Source</div>
-        <div class="opensource-list">
-            <div class="item">
-                <span class="project">summernote - https:&#x2F;&#x2F;github.com&#x2F;summernote&#x2F;summernote</span>
-                <div class="description">
-                    Super simple WYSIWYG editor
-                </div>
-            </div>  
-            <div class="item">
-                <span class="project">JUI - https:&#x2F;&#x2F;github.com&#x2F;juijs&#x2F;jui</span>
-                <div class="description">
-                    JUI provide all kinds of UI components that are used in web pages. 
-                </div>
-            </div>  
         </div>
 </section>
 

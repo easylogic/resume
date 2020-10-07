@@ -14,7 +14,12 @@
 
     body {
         margin:0 auto;
-        max-width:1100px;
+        max-width:900px;
+    }
+
+    a {
+        color: #4964e7 !important;
+        text-decoration: none;
     }
 
     .page-break {
@@ -73,6 +78,7 @@
         font-size:20px;
         margin-bottom:20px;
     }
+    
 
 
     section > .item-list .item .item-description ul {
@@ -80,13 +86,14 @@
         list-style:none;
     }
 
+
     section > .item-list .item .item-description ul li {
         display:inline-block;
         margin-right:20px;
     }
 
     section > .work-item-list .work-item {
-        padding:40px 20px 20px;
+        padding:20px;
     }
 
     section > .work-item-list .work-item .item-company {
@@ -94,10 +101,24 @@
     }
 
     section > .work-item-list .work-item .item-title {
-        padding: 10px 0px;
+        padding: 0px;
         font-weight:bold;
-        padding-bottom:20px;
+        padding-bottom:10px;
     }    
+
+
+
+    section > .work-item-list .work-item .item-title .title-description {
+        font-size: 14px;
+        color: #727272;
+        font-weight: normal;
+    }        
+
+    section > .work-item-list .work-item .item-title .star {
+        font-size: 16px;
+        color: #4964e7;
+        font-weight: normal;
+    }            
 
     section > .work-item-list .work-item .item-title h1 {
         display:inline-block;
@@ -171,6 +192,30 @@
 </section>
 
 <section class="page-break">
+        <div class="title">Open Source</div>
+        <div class="work-item-list">
+            {{#opensource.items}}
+            <div class="work-item">
+                <div class="item-title">
+                    <h1>{{project}} <span class='title-description'>- {{description}}</span></h1>
+                    <div class="item-duration">{{startAt}} ~ {{endAt}}</div>
+                    
+                </div>                       
+                <div class="repository">repository: <a href="{{repository}}" target="_blank">{{repository}}</a></div>
+                <div class="homepage">homepage: <a href="{{homepage}}" target="_blank">{{homepage}}</a></div>                 
+                <div class="description">
+                    <ul>
+                        {{#works}}
+                        <li>{{& .}}</li>
+                        {{/works}}
+                    </ul>                    
+                </div>
+            </div>  
+            {{/opensource.items}}
+        </div>
+</section>
+
+<section>
     <div class="title"> Work Experience</div>
     <div class="work-item-list">
         {{#work.items}}
@@ -202,20 +247,6 @@
                 <span class="date">{{date}}</span>
             </div>
             {{/education.items}}
-        </div>
-</section>
-
-<section>
-        <div class="title">Open Source</div>
-        <div class="opensource-list">
-            {{#opensource.items}}
-            <div class="item">
-                <span class="project">{{project}} - {{repository}}</span>
-                <div class="description">
-                    {{description}}
-                </div>
-            </div>  
-            {{/opensource.items}}
         </div>
 </section>
 

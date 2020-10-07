@@ -9,32 +9,134 @@
     },
 
     "objective" : {
-        "description" : "12년차 웹개발자로 프런트엔드 개발 및 서버 개발에서 다양한 경험이 있습니다. Java, Javascript, Node.js, MySQL, PHP 등의 기술을 사용해서 프로덕션 서비스를 개발 및 운영한 경험이 있으며 기존의 시스템을 좋은 방향으로 이끌려는 의지가 강합니다.\n\n 오픈소스 쪽에 관심이 많이 있으며 현재도 2개의 프로젝트에 메인 개발자로 활동하고 있습니다. 새로운 것에 관심이 많고 프로그램을 좀 더 잘 만들 수 있는 방법에 대한 연구하고 공유하는 것을 좋아합니다."
+        "description" : "14년차 웹개발자로 프런트엔드 개발 및 서버 개발에서 다양한 경험이 있습니다. Javascript, Node.js, Java, PHP 등의 기술을 사용해서 프로덕션 서비스를 개발 및 운영한 경험이 있으며 기존의 시스템을 좋은 방향으로 이끌려는 의지가 강합니다.\n\n 오픈소스 쪽에 관심이 많이 있으며 현재도 몇 개의 프로젝트에서 메인 개발자로 활동하고 있습니다. 새로운 것에 관심이 많고 프로그램을 좀 더 잘 만들 수 있는 방법에 대한 연구하고 공유하는 것을 좋아합니다."
     },
 
     "skill" : {
         "items" : [
             {
                 "title" : "Front-End", 
-                "skill-list" : [ "Javascript",  "Html5", "CSS3",  "JUI & Chart" ]
+                "skill-list" : [ "Javascript/TypeScript", "HTML5/CSS3", "Vue", "React" ]
             },
             {
                 "title" : "Back-End", 
-                "skill-list" : [ "NodeJS",  "Java", "PHP",  "CodeIgniter", "Spring Framework", "Jetty", "Apache" ]
+                "skill-list" : [ "NodeJS",  "Java", "PHP",  "Spring Framework"]
             },
             {
                 "title" : "Database", 
                 "skill-list" : [ "MySQL",  "MongoDB", "Redis",  "MS-SQL", "Oracle" ]
+            }
+        ]
+    },
+
+    "opensource": {
+        "items" : [
+            {
+                "project" : "easylogic/editor",
+                "startAt": "2019.05",
+                "endAt": "현재",
+                "repository" : "https://github.com/easylogic/editor",
+                "star": "134",
+                "description" : "Fantastic Web Design Tool",
+                "homepage": "https://www.easylogic.studio",
+                "works": [
+                    "웹 기반 디자인 툴 개발",
+                    "Path 에디터, Gradient 에디터 등 웹디자인에 필요한 요소 개발",
+                    "자체 UI 프레임워크 개발(<a href=\"https://github.com/easylogic/sapa\" target=\"_sapa_\">Sapa</a>)"
+                ]
             },
             {
-                "title" : "ETC", 
-                "skill-list" : [ "Ubuntu",  "Git/Github", "Subversion" ]
-            }                
+                "project" : "codemirror-colorpicker",
+                "startAt": "2017.01",
+                "endAt": "현재",
+                "repository" : "https://github.com/easylogic/codemirror-colorpicker",
+                "star": "68",
+                "description" : "코드미러에서 사용할 수 있는 컬러피커",
+                "homepage": "https://colorpicker.easylogic.studio",                
+                "works": [
+                    "코드미러 에디터 컬러피커 제작 ",
+                    "이미지 필터 기능 구현 (WebGL용 필터 개발)",
+                    "Gradient 모듈 개발",
+                    "이미지 Histogram 모듈 개발"
+                ]
+            },            
+            {
+                "project" : "Summernote",
+                "startAt": "2014.10",
+                "endAt": "현재",
+                "repository" : "https://github.com/summernote/summernote",
+                "star": "9.7k",
+                "description" : "Super simple WYSIWYG editor",
+                "homepage": "https://summernote.org",                
+                "works": [
+                    "Summernote 메인테이너",
+                    "Summernote 플러그인 & 모듈 시스템 개발",
+                    "Hint 모듈 개발",
+                    "Summernote Lite 버전 개발"
+                ]
+            },
+            {
+                "project" : "JUI",
+                "startAt": "2014.03",
+                "endAt": "2017.06",                
+                "repository" : "https://github.com/juijs/jui",
+                "star": "397",
+                "description" : "JUI provide all kinds of UI components that are used in web pages. ",
+                "homepage": "http://jui.io/",                    
+                "works": [
+                    "UI & Chart 개발 및 유지보수",
+                    "Virtual Table 개발",
+                    "Color Picker 개발 ",
+                    "Chart 그리드 레이아웃 시스템 코어 개발"
+                ]
+            }
         ]
     },
 
     "work" : {
         "items" : [
+            {
+                "company" : "MyRealTrip",
+                "color" : "#2d96ed",
+                "startAt" : "2019.12",
+                "endAt": "현재",
+                "title" : "프런트엔드 개발",
+                "description" : "마이리얼트립에서 적용되는 프런트엔드 시스템 개발 및 유지보수",
+                "works" : [ 
+                    "파트너/매니저 리뉴얼 프로젝트 진행 (Typescript, React 기반)",
+                    "파트너/매니저에서 사용되는 NextJS 빌드를 기본 Webpack 빌드로 전환 작업",
+                    "RoR과 Docker 시스템에서 프런트개발 시스템 분리 ",
+                    "Swagger JSON 통합 관리 툴 개발",
+                    "프로모션 이미지 링크 맵 툴 개발",
+                    "템플릿으로 이미지를 생성하는 툴 개발"
+                ]
+            },                                    
+            {
+                "company" : "Line Biz Plus",
+                "color" : "green",
+                "startAt" : "2019.02",
+                "endAt": "2019.12",
+                "title" : "BITMAX 가상화폐 거래소 개발",
+                "description" : "가상화폐거래소 개발의 프런트엔드 리딩을 담당",
+                "works" : [ 
+                    "일본향 라인앱 가상화폐 거래소 개발 리딩",
+                    "React & Hook 적용",
+                    "ChartIQ 적용"
+                ]
+            },                                    
+            {
+                "company" : "Line Plus",
+                "color" : "green",
+                "startAt" : "2017.12",
+                "endAt": "2019.12",
+                "title" : "BITBOX 가상화폐 거래소 개발",
+                "description" : "가상화폐거래소 개발의 프런트엔드 리딩을 담당",
+                "works" : [ 
+                    "글로벌향 exchange 거래소 개발 리딩",
+                    "VueJS 선정 및 프런트 초기 환경 설정",
+                    "ChartIQ 및 트레이딩뷰 적용"
+                ]
+            },
             {
                 "company" : "JenniferSoft",
                 "color" : "blue",
@@ -222,21 +324,6 @@
     "education" : {
         "items" : [
             { "place" : "부산외국어대학교 컴퓨터공학부", "date" : "2006.02" }
-        ]
-    },
-
-    "opensource": {
-        "items" : [
-            {
-                "project" : "summernote",
-                "repository" : "https://github.com/summernote/summernote",
-                "description" : "Super simple WYSIWYG editor"
-            },
-            {
-                "project" : "JUI",
-                "repository" : "https://github.com/juijs/jui",
-                "description" : "JUI provide all kinds of UI components that are used in web pages. "
-            }
         ]
     }
 
