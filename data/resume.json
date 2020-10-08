@@ -16,15 +16,11 @@
         "items" : [
             {
                 "title" : "Front-End", 
-                "skill-list" : [ "Javascript/TypeScript", "HTML5/CSS3", "Vue", "React" ]
+                "skill-list" : [ "Javascript", "TypeScript", "HTML5/CSS3", "Vue", "React" ]
             },
             {
                 "title" : "Back-End", 
-                "skill-list" : [ "NodeJS",  "Java", "PHP",  "Spring Framework"]
-            },
-            {
-                "title" : "Database", 
-                "skill-list" : [ "MySQL",  "MongoDB", "Redis",  "MS-SQL", "Oracle" ]
+                "skill-list" : [ "NodeJS",  "Java", "PHP"]
             }
         ]
     },

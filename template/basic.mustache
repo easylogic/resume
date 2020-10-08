@@ -94,6 +94,7 @@
 
     section > .work-item-list .work-item {
         padding:20px;
+        padding-bottom: 0px;
     }
 
     section > .work-item-list .work-item .item-company {
@@ -172,26 +173,23 @@
     </div>
 </section>
 
-<section>
+<section style='margin-top: -20px;'>
     <div class="title">Skills</div>
-    <div class="item-list">
+    <div class="item-list skill-set">
         {{#skill.items}}
-        <div class="item">
-            <div class="item-title">{{title}}</div>
+        <div class="item" style="display: flex;">
+            <div class="item-title" style="width:200px;display:inline-block;">{{title}}</div>
             <div class="item-description">
-                <ul>
-                    {{#skill-list}}
-                    <li>{{.}}</li>
-                    {{/skill-list}}
-                </ul>
-                
+                {{#skill-list}}
+                <span style='display:inline-block;margin-right:10px;'>{{.}}</span>
+                {{/skill-list}}
             </div>
         </div>
         {{/skill.items}}
     </div>
 </section>
 
-<section class="page-break">
+<section style='margin-top: -20px;'>
         <div class="title">Open Source</div>
         <div class="work-item-list">
             {{#opensource.items}}
@@ -215,7 +213,7 @@
         </div>
 </section>
 
-<section>
+<section class="page-break">
     <div class="title"> Work Experience</div>
     <div class="work-item-list">
         {{#work.items}}
