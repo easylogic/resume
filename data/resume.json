@@ -1,26 +1,42 @@
 {
+    "header": {
+        "logo": {
+            "src": "/assets/giahr.png",
+            "width": 140
+        }
+    },
     "author" : {
         "name" : "박 진호",
         "email" : "cyberuls@gmail.com",
-        "phonenumber" : "010-4015-9956",
+        "//phonenumber" : "010-4015-9956",
         "resource" : [
             { "title" : "github.com/easlogic", "link" : "https://github.com/easylogic"}
         ]
     },
 
     "objective" : {
-        "description" : "14년차 웹개발자로 프런트엔드 개발 및 서버 개발에서 다양한 경험이 있습니다. Javascript, Node.js, Java, PHP 등의 기술을 사용해서 프로덕션 서비스를 개발 및 운영한 경험이 있으며 기존의 시스템을 좋은 방향으로 이끌려는 의지가 강합니다.\n\n 오픈소스 쪽에 관심이 많이 있으며 현재도 몇 개의 프로젝트에서 메인 개발자로 활동하고 있습니다. 새로운 것에 관심이 많고 프로그램을 좀 더 잘 만들 수 있는 방법에 대한 연구하고 공유하는 것을 좋아합니다."
+        "description" : [
+            "15년차 웹개발자로 프런트엔드 개발 및 서버 개발에서 다양한 경험이 있습니다. ",
+            "Javascript, Node.js, Java, PHP 등의 기술을 사용해서 프로덕션 서비스를 개발 및 운영한 경험이 있으며 기존의 시스템을 좋은 방향으로 이끌려는 의지가 강합니다.",
+            "<br />",
+            "<br />",
+            "오픈소스 쪽에 관심이 많이 있으며 현재도 몇 개의 프로젝트에서 메인 개발자로 활동하고 있습니다. ",
+            "새로운 것에 관심이 많고 프로그램을 좀 더 잘 만들 수 있는 방법에 대한 연구하고 공유하는 것을 좋아합니다.",
+            "<br />",
+            "<br />",
+            "특히 단순히 개발뿐만 아니라 개발 이외의 영역(사업, 기획, 마케팅, QA)에서도 개발이 필요한 부분에 즉시 투입되서 해당부서의 실행력을 높이는 형태로 지속적으로 많은 일을 하고 있습니다."
+        ]           
     },
 
     "skill" : {
         "items" : [
             {
                 "title" : "Front-End", 
-                "skill-list" : [ "Javascript", "TypeScript", "HTML5/CSS3", "Vue", "React" ]
+                "list" : [ "Javascript", "TypeScript", "HTML5/CSS3", "Vue", "React" ]
             },
             {
                 "title" : "Back-End", 
-                "skill-list" : [ "NodeJS",  "Java", "PHP"]
+                "list" : [ "NodeJS",  "Java", "PHP"]
             }
         ]
     },
@@ -92,10 +108,31 @@
     "work" : {
         "items" : [
             {
+                "company" : "Naver",
+                "color" : "#00c73c",
+                "startAt" : "2021.03",
+                "endAt": "현재",
+                "title" : "스마트에디터 프런트엔드 개발",
+                "description" : "스마트에디터 신규 에디터 엔진 개발 및 유지보수",
+                "works" : [ 
+                    {
+                        "title": "스마트에디터 신규 엔진 개발 및 유지보수 ",
+                        "subjects": [
+                            "스마트에디터 신규 엔진(ContentEditable 기반) 개발",
+                            "멀티 에디터 테스트를 가능하게 하는 webpack 빌드 적용",
+                            "싱글 인스턴스 동작 가능하게 하는 프로젝트 구성",
+                            "스마트에디터 자체 모델 기반 크롬 익스텐션 개발자도구 개발 "
+                        ]
+                    },
+                        
+                    "스마트에디터 AI 어시스턴스 POC UI 개발"
+                ]
+            },            
+            {
                 "company" : "MyRealTrip",
                 "color" : "#2d96ed",
                 "startAt" : "2019.12",
-                "endAt": "현재",
+                "endAt": "2021.03",
                 "title" : "프런트엔드 개발",
                 "description" : "마이리얼트립에서 적용되는 프런트엔드 시스템 개발 및 유지보수",
                 "works" : [ 
@@ -131,6 +168,17 @@
                     "글로벌향 exchange 거래소 개발 리딩",
                     "VueJS 선정 및 프런트 초기 환경 설정",
                     "ChartIQ 및 트레이딩뷰 적용"
+                ]
+            },
+            {
+                "company" : "브릉 솔루션즈",
+                "color" : "#01c277",
+                "startAt" : "2017.07",
+                "endAt": "2017.09",
+                "title" : "브릉 솔루션 해외 사업 개발 ",
+                "description" : "자체 이륜차 물류/택배 솔루션을 해외에 제공하기 위한 서비스를 개발하였습니다.",
+                "works" : [ 
+                    "배차 솔루션 다국어 서비스 개발"
                 ]
             },
             {

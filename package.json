@@ -4,8 +4,8 @@
   "description": "Resume builder",
   "main": "index.js",
   "scripts": {
-    "build": "npm run basic",
-    "basic": "mustache data/resume.json template/basic.mustache > public/basic.html"
+    "build": "npm run build:basic",
+    "build:basic": "node system/run.js"    
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,5 @@
   },
   "homepage": "https://github.com/easylogic/resume#readme",
   "dependencies": {},
-  "devDependencies": {
-    "mustache": "^2.3.0"
-  }
+  "devDependencies": {}
 }

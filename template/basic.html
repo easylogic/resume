@@ -23,13 +23,17 @@
     }
 
     .page-break {
-        page-break-after: always;
         page-break-inside: avoid;
+    }
+
+    .prefix {
+        padding-top: 40px;
     }
 
     header.author {
         display:flex;
-        padding:40px 0px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     header.author .author-name {
@@ -152,16 +156,19 @@
 </head>
 <body>
     
+<div class="prefix">
+    <img src="${resume.header.logo.src}" width="${resume.header.logo.width}" />
+</div>
 <header class="author">
-    <div class="author-name">{{author.name}}</div>
+    <div class="author-name">${resume.author.name}</div>
     <div class="author-info">
 
-        {{#author.email}}<div class="author-email">{{author.email}}</div>{{/author.email}}
-        {{#author.phonenumber}}<div class="author-phonenumber">{{author.phonenumber}}</div>{{/author.phonenumber}}
+        ${resume.author.email ? `<a href="mailto:${resume.author.email}">${resume.author.email}</a>` : ''}
+        ${resume.author.phonenumber ? `<div class="author-phonenumber">${resume.author.phonenumber}</div>` : ''}        
         <div class="author-resource">
-            {{#author.resource}}
-            <a href="{{{link}}}">{{title}}</a>
-            {{/author.resource}}
+            ${resume.author.resource.map(({title,link}) => {
+                return `<div><a href="${link}">${title}</a></div>`
+            }).join('')}
         </div>
     </div>
 </header>
@@ -169,82 +176,92 @@
 <section>
     <div class="title">Objective</div>
     <div class="description">
-        {{ objective.description }}
+        ${ resume.objective.description.join('')  }
     </div>
 </section>
 
 <section style='margin-top: -20px;'>
     <div class="title">Skills</div>
     <div class="item-list skill-set">
-        {{#skill.items}}
-        <div class="item" style="display: flex;">
-            <div class="item-title" style="width:200px;display:inline-block;">{{title}}</div>
-            <div class="item-description">
-                {{#skill-list}}
-                <span style='display:inline-block;margin-right:10px;'>{{.}}</span>
-                {{/skill-list}}
+        ${resume.skill.items.map(({ title, list }) => `
+            <div class="item" style="display: flex;">
+                <div class="item-title" style="width:200px;display:inline-block;">${title}</div>
+                <div class="item-description">
+                    ${list.map(skill => `<span>${skill}</span>`).join(' ')}
+                </div>
             </div>
-        </div>
-        {{/skill.items}}
+        `).join('')}
     </div>
 </section>
 
-<section style='margin-top: -20px;'>
+<section class="page-break" style='margin-top: -20px;'>
         <div class="title">Open Source</div>
         <div class="work-item-list">
-            {{#opensource.items}}
-            <div class="work-item">
-                <div class="item-title">
-                    <h1>{{project}} <span class='title-description'>- {{description}}</span></h1>
-                    <div class="item-duration">{{startAt}} ~ {{endAt}}</div>
-                    
-                </div>                       
-                <div class="repository">repository: <a href="{{repository}}" target="_blank">{{repository}}</a></div>
-                <div class="homepage">homepage: <a href="{{homepage}}" target="_blank">{{homepage}}</a></div>                 
-                <div class="description">
-                    <ul>
-                        {{#works}}
-                        <li>{{& .}}</li>
-                        {{/works}}
-                    </ul>                    
-                </div>
-            </div>  
-            {{/opensource.items}}
+            ${resume.opensource.items.map(({project, description, startAt, endAt, repository, homepage, works}) => `
+                <div class="work-item">
+                    <div class="item-title">
+                        <h1>${project} <span class='title-description'>- ${description}</span></h1>
+                        <div class="item-duration">${startAt} ~ ${endAt}</div>
+                        
+                    </div>                       
+                    <div class="repository">repository: <a href="${repository}" target="_blank">${repository}</a></div>
+                    <div class="homepage">homepage: <a href="${homepage}" target="_blank">${homepage}</a></div>                 
+                    <div class="description">
+                        <ul>
+                            ${works.map(work => `<li>${work}</li>`).join('')}
+                        </ul>                    
+                    </div>
+                </div>  
+            `).join('')}
         </div>
 </section>
 
 <section class="page-break">
     <div class="title"> Work Experience</div>
     <div class="work-item-list">
-        {{#work.items}}
-        <div class="work-item">
-            <div class="item-company" style="color: {{color}};">{{company}}</div>
-            <div class="item-title">
-                <h1>{{title}}</h1>
-                <div class="item-duration">{{startAt}} ~ {{endAt}}</div>
-            </div>            
-            <div class="item-description">
-                <div>{{description}}</div>
-                <ul>
-                    {{#works}}
-                    <li>{{.}}</li>
-                    {{/works}}
-                </ul>
-            </div>  
-        </div>
-        {{/work.items}}
+
+        ${resume.work.items.map(({color, company, title, startAt, endAt, description, works}) => `
+            <div class="work-item">
+                <div class="item-company" style="color: ${color};">${company}</div>
+                <div class="item-title">
+                    <h1>${title}</h1>
+                    <div class="item-duration">${startAt} ~ ${endAt}</div>
+                </div>            
+                <div class="item-description">
+                    <div>${description}</div>
+                    <ul>
+                        ${works.map(work => {
+
+                            if (typeof work === 'object') {
+                                return `
+                                    <li>
+                                        ${work.title}
+                                        <ul>
+                                            ${work.subjects.map(subj => `<li>${subj}</li>`).join('')}
+                                        </ul>
+                                    </li>
+                                `
+                            }
+
+                            return `<li>${work}</li>`
+                        }).join('')}
+                    </ul>
+                </div>  
+            </div>
+        `).join('')}
     </div>
 </section>
 
 <section>
         <div class="title">Education</div>
         <div class="edu-list">
-            {{#education.items}}
-            <div class="edu-item">
-                <span class="place">{{place}}</span>
-                <span class="date">{{date}}</span>
-            </div>
-            {{/education.items}}
+            ${resume.education.items.map(({place, date}) => `
+                <div class="edu-item">
+                    <span class="place">${place}</span>
+                    <span class="date">${date}</span>
+                </div>
+
+            `).join('')}
         </div>
 </section>
 
