@@ -36,7 +36,7 @@
       "achievements": [
         "파트너/매니저 리뉴얼 프로젝트 진행 (Typescript, React 기반)",
         "파트너/매니저에서 사용되는 NextJS 빌드를 기본 Webpack 빌드로 전환 작업",
-        "RoR과 Docker 시스템에서 프런트개발 시스템 분리",
+        "Ruby on Rails와 Docker 시스템에서 프런트개발 시스템 분리",
         "Swagger JSON 통합 관리 툴 개발",
         "프로모션 이미지 링크 맵 툴 개발",
         "템플릿으로 이미지를 생성하는 툴 개발"
