@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume</title>
+    <style type="text/css">
+
+    html,body {
+        margin:0px;
+        padding:0px;
+    }
+
+    body {
+        margin:0 auto;
+        max-width:900px;
+    }
+
+    a {
+        color: #4964e7 !important;
+        text-decoration: none;
+    }
+
+    .page-break {
+        page-break-inside: avoid;
+    }
+
+    .prefix {
+        padding-top: 40px;
+    }
+
+    header.author {
+        display:flex;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    header.author .author-name {
+        flex:1;
+        font-size:70px;
+        font-weight:bold;
+    }
+
+    header.author .author-info {
+        flex:1;
+        text-align:right;
+    }    
+
+    header.author .author-info * {
+        text-decoration:none;
+        margin-bottom:10px;
+    }
+
+    section {
+        padding:30px 0px;
+    }
+
+    section > .title {
+        font-size:28px;
+        font-weight:bold;
+        border-bottom:1px solid rgba(0, 0, 0, 0.8); 
+        padding-bottom:20px;
+        margin-bottom:15px;
+    }
+
+    section > .description {
+        padding-left:30px;
+        line-height:2;
+    }
+
+    section > .item-list {
+        padding-left:20px;        
+    }
+
+    section > .item-list > .item {
+        margin-bottom:10px;
+    }
+
+    section > .item-list .item .item-title {
+        font-weight:bold;
+        font-size:20px;
+        margin-bottom:20px;
+    }
+    
+
+
+    section > .item-list .item .item-description ul {
+        display:inline-block;
+        list-style:none;
+    }
+
+
+    section > .item-list .item .item-description ul li {
+        display:inline-block;
+        margin-right:20px;
+    }
+
+    section > .work-item-list .work-item {
+        padding:20px;
+        padding-bottom: 0px;
+    }
+
+    section > .work-item-list .work-item .item-company {
+        font-weight:bold;
+    }
+
+    section > .work-item-list .work-item .item-title {
+        padding: 0px;
+        font-weight:bold;
+        padding-bottom:10px;
+    }    
+
+
+
+    section > .work-item-list .work-item .item-title .title-description {
+        font-size: 14px;
+        color: #727272;
+        font-weight: normal;
+    }        
+
+    section > .work-item-list .work-item .item-title .star {
+        font-size: 16px;
+        color: #4964e7;
+        font-weight: normal;
+    }            
+
+    section > .work-item-list .work-item .item-title h1 {
+        display:inline-block;
+        margin:0px;
+    }
+
+    section > .work-item-list .work-item .item-duration {
+        float:right;
+        color: rgba(0, 0, 255, 0.5);
+    }
+
+    section > .work-item-list .work-item .item-description {
+        line-height:2;
+    }
+
+    section .edu-item .date {
+        color: rgba(0, 0, 255, 0.5);
+        margin-left:20px;
+    }
+
+    section .opensource-list .item {
+        padding:10px;
+    }
+
+    section .opensource-list .item .description {
+        padding-top:10px;
+        padding-left:30px;
+    } 
+    </style>
+</head>
+<body>
+    
+<div class="prefix">
+    <img src="/assets/giahr.png" width="140" />
+</div>
+<header class="author">
+    <div class="author-name">박 진호</div>
+    <div class="author-info">
+
+        <a href="mailto:cyberuls@gmail.com">cyberuls@gmail.com</a>
+                
+        <div class="author-resource">
+            <div><a href="https://github.com/easylogic">github.com/easlogic</a></div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="title">Objective</div>
+    <div class="description">
+        15년차 웹개발자로 프런트엔드 개발 및 서버 개발에서 다양한 경험이 있습니다. Javascript, Node.js, Java, PHP 등의 기술을 사용해서 프로덕션 서비스를 개발 및 운영한 경험이 있으며 기존의 시스템을 좋은 방향으로 이끌려는 의지가 강합니다.<br /><br />오픈소스 쪽에 관심이 많이 있으며 현재도 몇 개의 프로젝트에서 메인 개발자로 활동하고 있습니다. 새로운 것에 관심이 많고 프로그램을 좀 더 잘 만들 수 있는 방법에 대한 연구하고 공유하는 것을 좋아합니다.<br /><br />특히 단순히 개발뿐만 아니라 개발 이외의 영역(사업, 기획, 마케팅, QA)에서도 개발이 필요한 부분에 즉시 투입되서 해당부서의 실행력을 높이는 형태로 지속적으로 많은 일을 하고 있습니다.
+    </div>
+</section>
+
+<section style='margin-top: -20px;'>
+    <div class="title">Skills</div>
+    <div class="item-list skill-set">
+        
+            <div class="item" style="display: flex;">
+                <div class="item-title" style="width:200px;display:inline-block;">Front-End</div>
+                <div class="item-description">
+                    <span>Javascript</span> <span>TypeScript</span> <span>HTML5/CSS3</span> <span>Vue</span> <span>React</span>
+                </div>
+            </div>
+        
+            <div class="item" style="display: flex;">
+                <div class="item-title" style="width:200px;display:inline-block;">Back-End</div>
+                <div class="item-description">
+                    <span>NodeJS</span> <span>Java</span> <span>PHP</span>
+                </div>
+            </div>
+        
+    </div>
+</section>
+
+<section class="page-break" style='margin-top: -20px;'>
+        <div class="title">Open Source</div>
+        <div class="work-item-list">
+            
+                <div class="work-item">
+                    <div class="item-title">
+                        <h1>easylogic/editor <span class='title-description'>- Fantastic Web Design Tool</span></h1>
+                        <div class="item-duration">2019.05 ~ 현재</div>
+                        
+                    </div>                       
+                    <div class="repository">repository: <a href="https://github.com/easylogic/editor" target="_blank">https://github.com/easylogic/editor</a></div>
+                    <div class="homepage">homepage: <a href="https://www.easylogic.studio" target="_blank">https://www.easylogic.studio</a></div>                 
+                    <div class="description">
+                        <ul>
+                            <li>웹 기반 디자인 툴 개발</li><li>Path 에디터, Gradient 에디터 등 웹디자인에 필요한 요소 개발</li><li>자체 UI 프레임워크 개발(<a href="https://github.com/easylogic/sapa" target="_sapa_">Sapa</a>)</li>
+                        </ul>                    
+                    </div>
+                </div>  
+            
+                <div class="work-item">
+                    <div class="item-title">
+                        <h1>codemirror-colorpicker <span class='title-description'>- 코드미러에서 사용할 수 있는 컬러피커</span></h1>
+                        <div class="item-duration">2017.01 ~ 현재</div>
+                        
+                    </div>                       
+                    <div class="repository">repository: <a href="https://github.com/easylogic/codemirror-colorpicker" target="_blank">https://github.com/easylogic/codemirror-colorpicker</a></div>
+                    <div class="homepage">homepage: <a href="https://colorpicker.easylogic.studio" target="_blank">https://colorpicker.easylogic.studio</a></div>                 
+                    <div class="description">
+                        <ul>
+                            <li>코드미러 에디터 컬러피커 제작 </li><li>이미지 필터 기능 구현 (WebGL용 필터 개발)</li><li>Gradient 모듈 개발</li><li>이미지 Histogram 모듈 개발</li>
+                        </ul>                    
+                    </div>
+                </div>  
+            
+                <div class="work-item">
+                    <div class="item-title">
+                        <h1>Summernote <span class='title-description'>- Super simple WYSIWYG editor</span></h1>
+                        <div class="item-duration">2014.10 ~ 현재</div>
+                        
+                    </div>                       
+                    <div class="repository">repository: <a href="https://github.com/summernote/summernote" target="_blank">https://github.com/summernote/summernote</a></div>
+                    <div class="homepage">homepage: <a href="https://summernote.org" target="_blank">https://summernote.org</a></div>                 
+                    <div class="description">
+                        <ul>
+                            <li>Summernote 메인테이너</li><li>Summernote 플러그인 & 모듈 시스템 개발</li><li>Hint 모듈 개발</li><li>Summernote Lite 버전 개발</li>
+                        </ul>                    
+                    </div>
+                </div>  
+            
+                <div class="work-item">
+                    <div class="item-title">
+                        <h1>JUI <span class='title-description'>- JUI provide all kinds of UI components that are used in web pages. </span></h1>
+                        <div class="item-duration">2014.03 ~ 2017.06</div>
+                        
+                    </div>                       
+                    <div class="repository">repository: <a href="https://github.com/juijs/jui" target="_blank">https://github.com/juijs/jui</a></div>
+                    <div class="homepage">homepage: <a href="http://jui.io/" target="_blank">http://jui.io/</a></div>                 
+                    <div class="description">
+                        <ul>
+                            <li>UI & Chart 개발 및 유지보수</li><li>Virtual Table 개발</li><li>Color Picker 개발 </li><li>Chart 그리드 레이아웃 시스템 코어 개발</li>
+                        </ul>                    
+                    </div>
+                </div>  
+            
+        </div>
+</section>
+
+<section class="page-break">
+    <div class="title"> Work Experience</div>
+    <div class="work-item-list">
+
+        
+            <div class="work-item">
+                <div class="item-company" style="color: #00c73c;">Naver</div>
+                <div class="item-title">
+                    <h1>스마트에디터 프런트엔드 개발</h1>
+                    <div class="item-duration">2021.03 ~ 현재</div>
+                </div>            
+                <div class="item-description">
+                    <div>스마트에디터 신규 에디터 엔진 개발 및 유지보수</div>
+                    <ul>
+                        
+                                    <li>
+                                        스마트에디터 신규 엔진 개발 및 유지보수 
+                                        <ul>
+                                            <li>스마트에디터 신규 엔진(ContentEditable 기반) 개발</li><li>멀티 에디터 테스트를 가능하게 하는 webpack 빌드 적용</li><li>싱글 인스턴스 동작 가능하게 하는 프로젝트 구성</li><li>스마트에디터 자체 모델 기반 크롬 익스텐션 개발자도구 개발 </li>
+                                        </ul>
+                                    </li>
+                                <li>스마트에디터 AI 어시스턴스 POC UI 개발</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: #2d96ed;">MyRealTrip</div>
+                <div class="item-title">
+                    <h1>프런트엔드 개발</h1>
+                    <div class="item-duration">2019.12 ~ 2021.03</div>
+                </div>            
+                <div class="item-description">
+                    <div>마이리얼트립에서 적용되는 프런트엔드 시스템 개발 및 유지보수</div>
+                    <ul>
+                        <li>파트너/매니저 리뉴얼 프로젝트 진행 (Typescript, React 기반)</li><li>파트너/매니저에서 사용되는 NextJS 빌드를 기본 Webpack 빌드로 전환 작업</li><li>RoR과 Docker 시스템에서 프런트개발 시스템 분리 </li><li>Swagger JSON 통합 관리 툴 개발</li><li>프로모션 이미지 링크 맵 툴 개발</li><li>템플릿으로 이미지를 생성하는 툴 개발</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: green;">Line Biz Plus</div>
+                <div class="item-title">
+                    <h1>BITMAX 가상화폐 거래소 개발</h1>
+                    <div class="item-duration">2019.02 ~ 2019.12</div>
+                </div>            
+                <div class="item-description">
+                    <div>가상화폐거래소 개발의 프런트엔드 리딩을 담당</div>
+                    <ul>
+                        <li>일본향 라인앱 가상화폐 거래소 개발 리딩</li><li>React & Hook 적용</li><li>ChartIQ 적용</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: green;">Line Plus</div>
+                <div class="item-title">
+                    <h1>BITBOX 가상화폐 거래소 개발</h1>
+                    <div class="item-duration">2017.12 ~ 2019.12</div>
+                </div>            
+                <div class="item-description">
+                    <div>가상화폐거래소 개발의 프런트엔드 리딩을 담당</div>
+                    <ul>
+                        <li>글로벌향 exchange 거래소 개발 리딩</li><li>VueJS 선정 및 프런트 초기 환경 설정</li><li>ChartIQ 및 트레이딩뷰 적용</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: #01c277;">브릉 솔루션즈</div>
+                <div class="item-title">
+                    <h1>브릉 솔루션 해외 사업 개발 </h1>
+                    <div class="item-duration">2017.07 ~ 2017.09</div>
+                </div>            
+                <div class="item-description">
+                    <div>자체 이륜차 물류/택배 솔루션을 해외에 제공하기 위한 서비스를 개발하였습니다.</div>
+                    <ul>
+                        <li>배차 솔루션 다국어 서비스 개발</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: blue;">JenniferSoft</div>
+                <div class="item-title">
+                    <h1>제니퍼 뷰서버 기능 개발 및 유지 보수</h1>
+                    <div class="item-duration">2014.03 ~ 2017.06</div>
+                </div>            
+                <div class="item-description">
+                    <div>제니퍼의 메인 뷰기능을 담당하는 뷰서버의 개발과 유지보수를 했습니다. 특히 자체 뷰서버와 차트를 대용량의 성능데이타를 보여주는데 중점을 둬서 개발(튜닝)을 많이 하게 되었습니다.</div>
+                    <ul>
+                        <li>뷰서버 기능 개발</li><li>XView 차트 개선</li><li>보고서/템플릿 시스템 개발</li><li>뷰서버 Front-End 영역 튜닝</li><li>메인 대쉬보드 개발</li><li>리얼타임 차트 개발</li><li>JUI 오픈소스 개발 ( UI 와 chart 제공 )</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: orange;">SK Planet</div>
+                <div class="item-title">
+                    <h1>틱톡 웹클라이언트 개발</h1>
+                    <div class="item-duration">2013.6 ~ 2014.3</div>
+                </div>            
+                <div class="item-description">
+                    <div>틱톡 메신저의 웹 버전 개발하였습니다. 언제 어디서든 틱톡을 사용할 수 있게 하자는 취지하에 웹 메신저를 만들게 되었습니다.</div>
+                    <ul>
+                        <li>모바일 메신저 프로토콜 분석, 라이브러리 개발</li><li>웹 메신저 프록시 서버 개발</li><li>웹메신저 웹앱 개발</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: orange;">SK Planet</div>
+                <div class="item-title">
+                    <h1>tictoc.net 메인사이트 개발, 유지 보수</h1>
+                    <div class="item-duration">2013.2 ~ 2014.3</div>
+                </div>            
+                <div class="item-description">
+                    <div>틱톡 메신저의 메인 사이트를 개발하고 유지보수 하였습니다.</div>
+                    <ul>
+                        <li>code igniter 프레임워크 적용</li><li>메인 사이트 유지 보수</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: red;">네오위즈게임즈</div>
+                <div class="item-title">
+                    <h1>PLink, 개발환경 접속 에이전트 개발</h1>
+                    <div class="item-duration">2011.1 ~ 2012.12</div>
+                </div>            
+                <div class="item-description">
+                    <div>Fiddler(Http proxy)를 사용하여 사내 개발환경에 접속하기 위한 툴을 만들게 되었습니다. Host 설정과 Reverse Proxy 를 쉬운 포맷으로 설정할 수 있도록 규격을 맞추고 해당 정책들을 서버에서 받아서 실시간 로 드해서 QA,개발자,기획자 등등 원하는 사람들 모두 공통의 환경을 볼 수 있도록 개발하였습니다. 윈도우 이외 의 환경에서도 사용할 수 있도록 plink-nodejs 버전도 따로 개발하여 제공하고 있습니다.</div>
+                    <ul>
+                        <li>PLink 개발</li><li>Fiddler AddOn - PLink 개발</li><li>PLink nodejs 버전 개발</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: red;">네오위즈게임즈</div>
+                <div class="item-title">
+                    <h1>PBench, 웹서비스 성능측정 도구 개발</h1>
+                    <div class="item-duration">2011.1 ~ 2012.12</div>
+                </div>            
+                <div class="item-description">
+                    <div>피망내 여러 게임사이트들에 대한 성능을 주기적으로 분석해서 웹사이트 전체적인 성능을 최적화하기 위한 솔루션입니다. 원하는 사이트를 등록해놓으면 일정한 시간 주기마다 사이트의 성능측정 보고서를 받아볼 수 있습니다.</div>
+                    <ul>
+                        <li>성능측정 관련된 아키텍쳐 설계</li><li>분석 & 통계페이지 개발</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: red;">네오위즈게임즈</div>
+                <div class="item-title">
+                    <h1>Pmangpub 프레임워크 개발</h1>
+                    <div class="item-duration">2011.1 ~ 2012.12</div>
+                </div>            
+                <div class="item-description">
+                    <div>피망 사이트 내에서 서비스 되고 있는 퍼블리싱 사이트들의 개발을 좀 더 편리하게끔 하기 위해 공통된 사항 을 모아서 규격을 정하고 Pmangpub 이라는 자체 MVC 모델의 php 프레임워크를 개발하게 되었습니다. 현재 Pmangpub 을 사용하고 있는 피망내 퍼블리싱 사이트는 대략 15개 정도 됩니다.</div>
+                    <ul>
+                        <li>Pmangpub 프레임워크 설계, 모듈 개발</li><li>변수 설정 시스템 개발</li><li>페이지/유저별 실시간 로그뷰 기능 개발</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: red;">네오위즈게임즈</div>
+                <div class="item-title">
+                    <h1>피파온라인2,아바 사이트 개발</h1>
+                    <div class="item-duration">2010.5 ~ 2012.12</div>
+                </div>            
+                <div class="item-description">
+                    <div>피파온라인2, 아바 사이트의 개발을 담당하고 지속적으로 유지보수를 했습니다. 게임과 관련된 프로모션도 대 략 2년동안 200개 정도 개발을 하였습니다.</div>
+                    <ul>
+                        <li>피파온라인2,아바 사이트 개발</li><li>피파온라인2,아바 프로모션 개발</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: green;">NHN서비스</div>
+                <div class="item-title">
+                    <h1>네이버 고객센터 신규 개발</h1>
+                    <div class="item-duration">2009.11 ~ 2010.5</div>
+                </div>            
+                <div class="item-description">
+                    <div>네이버 고객센터 개편이 있어서 고객센터 시스템을 새로 개발하였습니다. 메일 문의 할 수 있는 페이지가 팝 업으로 작성되어져서 네이버 사이트 어디서에서 하나의 통합된 사이트처럼 고객센터를 사용 할 수 있도록 작 성되어졌습니다.</div>
+                    <ul>
+                        <li>네이버 고객센터 메일문의 시스템 개발</li><li>네이버 고객센터 서버 설정 및 관리</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: green;">NHN서비스</div>
+                <div class="item-title">
+                    <h1>한게임 고객센터 개편</h1>
+                    <div class="item-duration">2009.7 ~ 2009.11</div>
+                </div>            
+                <div class="item-description">
+                    <div>기존에 구현되어져 있던 NHN에서 사용되는 메일상담 시스템이 교체되게 되었습니다. 관련해서 새로운 메일 상담 시스템(ECMS)과 연동되는 고객센터를 전부 재개발 작업하였습니다.</div>
+                    <ul>
+                        <li>한게임 고객센터 리뉴얼</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: green;">NHN서비스</div>
+                <div class="item-title">
+                    <h1>CCMS (NHN 고객응대서비스 시스템) 개발 및 유지보수</h1>
+                    <div class="item-duration">2008.10 ~ 2009.7</div>
+                </div>            
+                <div class="item-description">
+                    <div>NHN에서 사용되는 고객응대시스템입니다. 주로 사용하는 사람들은 상담원들이 사용하고 있습니다. 고객들의 요청사항을 전화와 메일로 받아 답변을 해주는 시스템입니다.</div>
+                    <ul>
+                        <li>한게임, 네이버 관련된 부분에서 문의에 대해서 답변하는 부분을 개발</li><li>기타 CCMS 도구 개발</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: orange;">엠게임</div>
+                <div class="item-title">
+                    <h1>게임 속 아이템 몰 개발 및 유지보수</h1>
+                    <div class="item-duration">2007.3 ~ 2008.10</div>
+                </div>            
+                <div class="item-description">
+                    <div>게임 속에서 구현된 유료 아이템몰 중 웹으로 구현된 부분을 개발하였습니다. 판매되는 아이템에 대해서 CRM 페이지를 관리하였습니다. 대표적으로 열혈강호, 홀릭2, 풍림화산 웹몰이 있습니다.</div>
+                    <ul>
+                        <li>아이템몰 서버 관리</li><li>아이템 몰 페이지 개발</li><li>아이템몰 DB 관리</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: orange;">엠게임</div>
+                <div class="item-title">
+                    <h1>PC방 사이트, PC방 CRM 개발 및 유지보수</h1>
+                    <div class="item-duration">2006.5 ~ 2007.3</div>
+                </div>            
+                <div class="item-description">
+                    <div>PC방 관련된 서비스를 제공하는 사이트와 PC방 정보와 결제내역을 관리하는 CRM 을 관리하였습니다. 게임 또는 프리미엄 사이트에서 pc방 관련된 프로모션을 할 때 관련된 작업을 같이하였습니다.</div>
+                    <ul>
+                        <li>PC방 사이트 서버 관리</li><li>PC방 사이트 페이지 개발</li><li>PC방 DB 서버 관리</li><li>전자세금계산서 적용</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: orange;">엠게임</div>
+                <div class="item-title">
+                    <h1>해외게임 빌링 & CRM 사이트 개발 및 유지</h1>
+                    <div class="item-duration">2006.5 ~ 2007.3</div>
+                </div>            
+                <div class="item-description">
+                    <div>해외진출한 게임들에 대해서 CRM 사이트를 만들고 관리하는 작업을 하였습니다. CRM 사이트는 결제내역과 아이템들을 관리하고 관련 통계를 만들어서 제공하는 사이트입니다.</div>
+                    <ul>
+                        <li>빌링 사이트 서버 개발</li><li>DB 서버 관리</li><li>CRM 페이지 개발</li>
+                    </ul>
+                </div>  
+            </div>
+        
+            <div class="work-item">
+                <div class="item-company" style="color: orange;">엠게임</div>
+                <div class="item-title">
+                    <h1>프리미엄 사이트 개발 및 유지보수</h1>
+                    <div class="item-duration">2006.5 ~ 2007.3</div>
+                </div>            
+                <div class="item-description">
+                    <div>카드.보드 게임에 사용되는 정액요금제 관련 사이트입니다. 프리미엄 사이트 전체와 관련 디비 관리, 프로시저 등을 작성하였습니다.</div>
+                    <ul>
+                        <li>프리미엄 사이트 개발</li><li>프리미엄 서버 관리</li><li>프리미엄 DB 관리</li>
+                    </ul>
+                </div>  
+            </div>
+        
+    </div>
+</section>
+
+<section>
+        <div class="title">Education</div>
+        <div class="edu-list">
+            
+                <div class="edu-item">
+                    <span class="place">부산외국어대학교 컴퓨터공학부</span>
+                    <span class="date">2006.02</span>
+                </div>
+
+            
+        </div>
+</section>
+
+</body>
+</html>
