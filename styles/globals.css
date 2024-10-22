@@ -80,3 +80,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* 필요에 따라 다른 전역 인쇄 스타일을 추가할 수 있습니다 */
+}

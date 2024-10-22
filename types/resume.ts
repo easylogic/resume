@@ -48,7 +48,7 @@ export interface Education {
 
 export interface ResumeData {
   id: string;
-  template: string;
+  template: 'default' | 'modern';
   name: string;
   title: string;
   email: string;
