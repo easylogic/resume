@@ -15,6 +15,8 @@ import NewsletterTemplate from './NewsletterTemplate';
 import TypewriterEffectTemplate from './TypewriterEffectTemplate';
 import ClassicTemplate from './ClassicTemplate';
 import ProfessionalTemplate from './ProfessionalTemplate';
+import BlackpinkTemplate from './BlackpinkTemplate';
+
 
 export const templates = {
   default: DefaultTemplate,
@@ -34,6 +36,7 @@ export const templates = {
   typewriter: TypewriterEffectTemplate,
   classic: ClassicTemplate,
   professional: ProfessionalTemplate,
+  blackpink: BlackpinkTemplate
 };
 
 export type TemplateKey = keyof typeof templates;
