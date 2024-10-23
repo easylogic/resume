@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, Suspense } from 'react';
 import { ResumeData } from '../types/resume';
 import { templates, TemplateKey } from './templates/index';
 import { 
@@ -26,7 +26,7 @@ interface JSONResumeViewProps {
   resumeData: ResumeData;
 }
 
-export default function JSONResumeView({ resumeData }: JSONResumeViewProps) {
+function JSONResumeViewInner({ resumeData }: JSONResumeViewProps) {
   const searchParams = useSearchParams();
   const initialTemplate = searchParams.get('template') as TemplateKey | 'default';
 
@@ -167,5 +167,13 @@ export default function JSONResumeView({ resumeData }: JSONResumeViewProps) {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function JSONResumeView(props: JSONResumeViewProps) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <JSONResumeViewInner {...props} />
+    </Suspense>
   );
 }
