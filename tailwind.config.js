@@ -60,13 +60,25 @@ module.exports = {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
-  			}
+  			},
+  			'neon-green': '#39FF14',
+  			'neon-pink': '#FF10F0',
+  			'neon-blue': '#3B83BD',
+  			'light-punk': {
+  				background: '#F0F0F0',
+  				text: '#333333',
+  				accent1: '#FF6B6B',
+  				accent2: '#4ECDC4',
+  				accent3: '#45B7D1',
+  			},
   		},
   		animation: {
   			'fade-in-down': 'fadeInDown 1s ease-out',
   			'fade-in-up': 'fadeInUp 1s ease-out',
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			'glitch': 'glitch 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite',
+  			'typewriter': 'typing 3.5s steps(40, end), blink .75s step-end infinite',
   		},
   		keyframes: {
   			fadeInDown: {
@@ -104,13 +116,33 @@ module.exports = {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+  			glitch: {
+  				'0%': { transform: 'translate(0)' },
+  				'20%': { transform: 'translate(-5px, 5px)' },
+  				'40%': { transform: 'translate(-5px, -5px)' },
+  				'60%': { transform: 'translate(5px, 5px)' },
+  				'80%': { transform: 'translate(5px, -5px)' },
+  				'100%': { transform: 'translate(0)' },
+  			},
+  			typing: {
+  				'from': { width: '0' },
+  				'to': { width: '100%' },
+  			},
+  			blink: {
+  				'from, to': { 'border-color': 'transparent' },
+  				'50%': { 'border-color': 'orange' },
+  			},
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+  		boxShadow: {
+  			'neon': '0 0 5px theme("colors.neon-pink"), 0 0 10px theme("colors.neon-pink")',
+  			'neon-intense': '0 0 10px theme("colors.neon-pink"), 0 0 20px theme("colors.neon-pink"), 0 0 30px theme("colors.neon-pink")',
+  		},
   	}
   },
   plugins: [require("tailwindcss-animate")],

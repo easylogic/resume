@@ -13,6 +13,7 @@ export interface Project {
   link: string;
   description: string;
   highlights?: string[];
+  image?: string;
 }
 
 export interface Skill {
@@ -43,7 +44,8 @@ export interface Education {
   school: string;
   degree: string;
   period: string;
-
+  start: string;
+  end?: string;
 }
 
 export interface ResumeData {
