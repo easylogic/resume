@@ -94,9 +94,11 @@ export default function Home() {
             <TemplatePreview name="전문가" image="/templates/professional.svg" />
           </div>
           <div className="mt-10 text-center">
-            <Button size="lg">
-              모든 플릿 보기 <ArrowRight className="ml-2" />
-            </Button>
+            <Link href="/templates">
+              <Button size="lg">
+                모든 템플릿 보기 <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

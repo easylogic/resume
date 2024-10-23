@@ -9,16 +9,16 @@ export async function generateStaticParams() {
 }
 
 export default async function UserProfile({ params }: { params: { id: string } }) {
-  const userData = await loadUserData(params.id);
+  let userData = await loadUserData(params.id);
 
   if (!userData) {
-    return <div>User not found</div>;
+    userData = await loadUserData('fake');
   }
 
   return (
     <div className="min-h-screen">
       <NavigationBar />
-      <JSONResumeView resumeData={userData} />
+      <JSONResumeView resumeData={userData!} />
     </div>
   );
 }
