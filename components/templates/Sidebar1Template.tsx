@@ -88,7 +88,7 @@ const Sidebar1Template: React.FC<Sidebar1TemplateProps> = ({ data, expandedSecti
         <section className={`mb-12 p-6 border-l-4 ${accentColor}`}>
           <h2 className={`text-2xl font-bold mb-4 ${headingColor} uppercase`}>Projects</h2>
           {data.projects?.map((project, index) => (
-            <div key={index} className={`mb-6 pb-6 ${index !== data.projects?.length - 1 ? `border-b ${borderColor}` : ''}`}>
+            <div key={index} className={`mb-6 pb-6 ${index !== (data.projects?.length ?? 0) - 1 ? `border-b ${borderColor}` : ''}`}>
               <h3 className={`text-xl font-semibold ${accentColor}`}>{project.name}</h3>
               <p className="mt-2 mb-2">{project.description}</p>
               <a href={project.link} target="_blank" rel="noopener noreferrer" className={`${accentColor} hover:underline uppercase text-sm font-bold`}>View Project</a>
@@ -99,7 +99,7 @@ const Sidebar1Template: React.FC<Sidebar1TemplateProps> = ({ data, expandedSecti
         <section className={`mb-12 p-6 border-l-4 ${accentColor}`}>
           <h2 className={`text-2xl font-bold mb-4 ${headingColor} uppercase`}>Education</h2>
           {data.education?.map((edu, index) => (
-            <div key={index} className={`mb-4 ${index !== data.education?.length - 1 ? `pb-4 border-b ${borderColor}` : ''}`}>
+            <div key={index} className={`mb-4 ${index !== (data.education?.length ?? 0) - 1 ? `pb-4 border-b ${borderColor}` : ''}`}>
               <h3 className={`text-xl font-semibold ${accentColor}`}>{edu.school}</h3>
               <p className="uppercase">{edu.degree}</p>
               <p className={`text-gray-600 text-sm`}>{edu.period}</p>

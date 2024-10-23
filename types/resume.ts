@@ -6,6 +6,10 @@ export interface Experience {
   end: string;
   description: string;
   achievements: string[];
+  degree?: string;
+  field?: string;
+  graduationDate?: string;
+  school?: string;
 }
 
 export interface Project {

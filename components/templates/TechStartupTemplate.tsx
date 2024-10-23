@@ -111,7 +111,7 @@ const ContactButton: React.FC<{ href: string; icon: React.ReactNode; text: strin
 const SkillBadge: React.FC<{ skill: Skill }> = ({ skill }) => (
   <div className="bg-blue-100 text-blue-800 p-3 rounded-lg text-center transition-all duration-300 transform hover:scale-105 shadow">
     <p className="font-medium text-lg">{skill.name}</p>
-    <Progress value={skill.level} className="w-full h-2 mt-2 bg-blue-200" indicatorColor="bg-blue-600" />
+    <Progress value={skill.level} className="w-full h-2 mt-2 bg-blue-200" />
   </div>
 );
 

@@ -58,10 +58,10 @@ const TimelineTemplate: React.FC<TimelineTemplateProps> = ({ data, expandedSecti
             icon={isExperience(item) ? <Briefcase /> : <GraduationCap />}
           >
             <h3 className="vertical-timeline-element-title font-bold">
-              {isExperience(item) ? item.company : item.school}
+              {isExperience(item) ? item.company : (item as Education).school}
             </h3>
             <h4 className="vertical-timeline-element-subtitle text-blue-500">
-              {isExperience(item) ? item.position : item.degree}
+              {isExperience(item) ? item.position : (item as Education).degree}
             </h4>
             {isExperience(item) && (
               <>
