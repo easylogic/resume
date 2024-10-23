@@ -1,18 +1,18 @@
 'use client';
 
-import React, { useState, useCallback, Suspense } from 'react';
+import React, { useState, useCallback, Suspense, useRef } from 'react';
 import { ResumeData } from '../types/resume';
 import { templates, TemplateKey } from './templates/index';
 import { 
-  Sun, Moon, Printer, FileDown, ChevronDown, 
+  Sun, Moon, Printer, FileDown, 
   FileText, Layers, Newspaper, PenTool, 
   Contrast, Book, BarChart2, Film, 
-  Minimize2, Clock, Briefcase, Lightbulb,
+  Minimize2, Clock, Briefcase, 
   Cpu, Mail, Type, Award, Users
 } from 'lucide-react';
 import { jsPDF } from 'jspdf';
 import { useSearchParams } from 'next/navigation';
-import Image from 'next/image';
+import html2canvas from 'html2canvas';
 
 import {
   NavigationMenu,
@@ -47,10 +47,22 @@ function JSONResumeViewInner({ resumeData }: JSONResumeViewProps) {
     window.print();
   }, []);
 
-  const downloadPDF = useCallback(() => {
-    const doc = new jsPDF();
-    doc.text('Hello world!', 10, 10);
-    doc.save('resume.pdf');
+  const downloadPDF = useCallback(async () => {
+    if (resumeRef.current) {
+      const canvas = await html2canvas(resumeRef.current, {
+        scale: 2,
+        logging: false,
+        useCORS: true,
+      });
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF({
+        orientation: 'portrait',
+        unit: 'px',
+        format: [canvas.width, canvas.height]
+      });
+      pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
+      pdf.save('resume.pdf');
+    }
   }, []);
 
   const toggleSection = useCallback((section: string) => {
@@ -111,6 +123,8 @@ function JSONResumeViewInner({ resumeData }: JSONResumeViewProps) {
     }
   };
 
+  const resumeRef = useRef<HTMLDivElement>(null);
+
   return (
     <div className={`min-h-screen ${isDarkMode ? 'dark bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
       <div className="w-full">
@@ -119,7 +133,7 @@ function JSONResumeViewInner({ resumeData }: JSONResumeViewProps) {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger onClick={toggleMenu}>
-                  {selectedTemplate.charAt(0).toUpperCase() + selectedTemplate.slice(1)} Template
+                  {selectedTemplate.charAt(0).toUpperCase() + selectedTemplate.slice(1)}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="w-[600px] p-4">
@@ -155,7 +169,7 @@ function JSONResumeViewInner({ resumeData }: JSONResumeViewProps) {
             </button>
           </div>
         </div>
-        <div id="resume-content">
+        <div id="resume-content" ref={resumeRef}>
           <Template 
             data={resumeData} 
             expandedSections={expandedSections} 
